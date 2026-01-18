@@ -25,26 +25,7 @@ A full-stack web application for managing college events, registrations, approva
 - JWT Authentication
 - (possibly) Multer for event poster uploads
 
-## Project Structure
-COLLEGE-EVENT-MANAGEMENT-PROJECT/
-├── backend/           # Express API, routes, models, controllers
-│   ├── config/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   └── server.js (or index.js)
-├── frontend/          # React application
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── context/ (if using context API)
-│   │   └── App.jsx
-│   ├── public/
-│   └── package.json
-├── .gitignore
-└── README.md
-text## Installation & Setup
+
 
 ### Prerequisites
 - Node.js ≥ 18
