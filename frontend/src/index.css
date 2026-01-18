@@ -1,0 +1,229 @@
+/* Global styles */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Container for the main application */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Event list styles */
+.event-list {
+  display: flex;
+  flex-direction: column; /* Stack events vertically */
+  gap: 20px; /* Space between event cards */
+}
+
+/* Event card styles */
+.event-card {
+  background-color: #fff; /* White background for cards */
+  border: 1px solid #ccc; /* Light border for cards */
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px; /* Padding inside cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  display: flex; /* Use flexbox for layout */
+  gap: 15px; /* Space between image and event details */
+}
+
+/* Image container styling */
+.image-container {
+  width: 150px; /* Fixed width for the image */
+  height: 150px; /* Fixed height for the image */
+  background-color: #f0f0f0; /* Light gray background */
+  border: 2px dashed #ccc; /* Dashed border for placeholder */
+  border-radius: 5px; /* Rounded corners */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  overflow: hidden; /* Ensure image fits within */
+}
+
+/* Image styling */
+.image-container img {
+  width: 100%; /* Responsive width */
+  height: 100%; /* Responsive height */
+  object-fit: cover; /* Cover the area without distortion */
+  border-radius: 5px; /* Match the border radius of the container */
+}
+
+/* Event details styling */
+.event-details {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column; /* Stack details vertically */
+}
+
+/* Additional styles for event details */
+.event-details h3 {
+  margin: 0; /* Removes default margin */
+}
+
+/* Button styling */
+button {
+  padding: 5px 10px; /* Padding for button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Active link styles */
+.active {
+  font-weight: bold; /* Make active link bold */
+  color: #007bff; /* Change color of active link */
+}
+
+/* Dashboard card styles */
+.card {
+  background-color: #fff; /* White background for cards */
+  border: 1px solid #ccc; /* Light border for cards */
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px; /* Padding inside cards */
+  flex: 1; /* Allow card to grow */
+  margin-right: 20px; /* Space between cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: transform 0.2s; /* Smooth scale transition on hover */
+  height: 100px;
+  
+}
+
+.card:last-child {
+  margin-right: 0; /* No margin for the last card */
+}
+
+.card h3 {
+  margin: 0; /* Remove default margin */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Stats section styles */
+.dashboard-stats {
+  display: flex; /* Layout items in a row */
+  justify-content: space-between; /* Space out items */
+  margin: 20px 0; /* Margin above and below */
+}
+
+/* Admin container styling */
+.admin-container {
+  display: flex; /* Layout the sidebar and main content side by side */
+  position: relative; /* Allows absolute positioning of the sidebar */
+}
+
+/* Sidebar styles */
+
+
+/* Main content styles */
+.main-content {
+  flex: 1; /* Take up remaining space */
+  padding: 20px; /* Padding around the main content */
+  transition: margin-left 0.3s ease; /* Smooth transition for shifting */
+}
+
+/* When sidebar is open, shift main content */
+.main-content.shifted {
+  margin-left: 300px; /* Shift right to make space for sidebar */
+}
+
+/* Hamburger button styles */
+.hamburger {
+  background: none; /* No background */
+  border: none; /* No border */
+  font-size: 24px; /* Large enough for visibility */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: absolute; /* Position relative to the navbar */
+  top: 22px; /* Adjusted for better positioning */
+  left: 260px; /* Distance from the left */
+  z-index: 1100; /* Ensure it's above the sidebar */
+}
+
+/* Navbar styles */
+.admin-navbar {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  background-color: #007bff; /* Navbar background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding for navbar */
+  position: relative; /* Position for absolute elements */
+  z-index: 1200; /* Ensure it's above sidebar and other content */
+}
+
+.navbar-brand {
+  font-size: 24px; /* Brand text size */
+}
+
+.navbar-links {
+  display: flex; /* Display links in a row */
+  gap: 20px; /* Space between links */
+}
+
+.navbar-links a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 18px; /* Link text size */
+}
+
+/* Search input styles */
+.navbar-search {
+  position: relative; /* Allows positioning of input */
+}
+
+.search-input {
+  padding: 5px; /* Padding for input */
+  border: 1px solid #ccc; /* Border for input */
+  border-radius: 5px; /* Rounded corners */
+  width: 200px; /* Width of the search input */
+}
+
+/* User options styling */
+.navbar-user-options {
+  display: flex; /* Align user options in a row */
+  gap: 15px; /* Space between buttons */
+}
+
+.notification-btn,
+.user-profile-btn {
+  background: none; /* No background */
+  border: none; /* No border */
+  color: white; /* Button text color */
+  font-size: 18px; /* Button text size */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Optional hover effects */
+.navbar-links a:hover,
+.notification-btn:hover,
+.user-profile-btn:hover {
+  opacity: 0.8; /* Slight transparency on hover */
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  position: absolute; /* Position relative to the user profile button */
+  top: 50px; /* Adjust according to button size */
+  right: 0; /* Align to the right */
+  background-color: white; /* Background for dropdown */
+  border: 1px solid #ccc; /* Border for dropdown */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  z-index: 1200; /* Ensure it's above other content */
+}
+
+/* Dropdown link styles */
+.dropdown-menu a {
+  display: block; /* Each link takes full width */
+  padding: 10px; /* Padding for links */
+  color: #333; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect for dropdown links */
+.dropdown-menu a:hover {
+  background-color: #f4f4f4; /* Background on hover */
+}
